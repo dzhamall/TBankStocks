@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		6650F27E25C4D2B600F47BB4 /* String+Stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F27D25C4D2B600F47BB4 /* String+Stocks.swift */; };
 		6650F28325C4DD5B00F47BB4 /* UILabel+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F28225C4DD5B00F47BB4 /* UILabel+Configure.swift */; };
+		6650F2A225C54F1300F47BB4 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F2A125C54F1300F47BB4 /* Encodable.swift */; };
+		6650F2A725C5530200F47BB4 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F2A625C5530200F47BB4 /* NetworkSession.swift */; };
+		6650F2AC25C5543900F47BB4 /* URLSession+NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F2AB25C5543900F47BB4 /* URLSession+NetworkSession.swift */; };
+		6650F2B125C554EA00F47BB4 /* Endpointable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F2B025C554EA00F47BB4 /* Endpointable.swift */; };
+		6650F2B625C5560400F47BB4 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F2B525C5560400F47BB4 /* NetworkConstant.swift */; };
+		6650F2BC25C564B300F47BB4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F2BB25C564B300F47BB4 /* NetworkService.swift */; };
+		6650F2C525C567BF00F47BB4 /* StocksNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F2C425C567BF00F47BB4 /* StocksNetworkService.swift */; };
+		6650F2D125C5684500F47BB4 /* MarketListEndpointEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F2D025C5684500F47BB4 /* MarketListEndpointEndpoint.swift */; };
+		6650F30D25C5C26E00F47BB4 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F30C25C5C26E00F47BB4 /* StockModel.swift */; };
+		6650F31E25C5EA1300F47BB4 /* QuoteStockEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F31D25C5EA1300F47BB4 /* QuoteStockEndpoint.swift */; };
+		6650F32325C5EA4B00F47BB4 /* QuoteStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F32225C5EA4B00F47BB4 /* QuoteStock.swift */; };
 		66EF4AC525C4B600005F6D06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4AC425C4B600005F6D06 /* AppDelegate.swift */; };
 		66EF4AC925C4B600005F6D06 /* StocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4AC825C4B600005F6D06 /* StocksViewController.swift */; };
 		66EF4ACE25C4B604005F6D06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EF4ACD25C4B604005F6D06 /* Assets.xcassets */; };
@@ -43,6 +54,17 @@
 /* Begin PBXFileReference section */
 		6650F27D25C4D2B600F47BB4 /* String+Stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Stocks.swift"; sourceTree = "<group>"; };
 		6650F28225C4DD5B00F47BB4 /* UILabel+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Configure.swift"; sourceTree = "<group>"; };
+		6650F2A125C54F1300F47BB4 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		6650F2A625C5530200F47BB4 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		6650F2AB25C5543900F47BB4 /* URLSession+NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkSession.swift"; sourceTree = "<group>"; };
+		6650F2B025C554EA00F47BB4 /* Endpointable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpointable.swift; sourceTree = "<group>"; };
+		6650F2B525C5560400F47BB4 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		6650F2BB25C564B300F47BB4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		6650F2C425C567BF00F47BB4 /* StocksNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksNetworkService.swift; sourceTree = "<group>"; };
+		6650F2D025C5684500F47BB4 /* MarketListEndpointEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListEndpointEndpoint.swift; sourceTree = "<group>"; };
+		6650F30C25C5C26E00F47BB4 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		6650F31D25C5EA1300F47BB4 /* QuoteStockEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteStockEndpoint.swift; sourceTree = "<group>"; };
+		6650F32225C5EA4B00F47BB4 /* QuoteStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteStock.swift; sourceTree = "<group>"; };
 		66EF4AC125C4B600005F6D06 /* TinkoffStocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffStocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EF4AC425C4B600005F6D06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66EF4AC825C4B600005F6D06 /* StocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +114,72 @@
 			isa = PBXGroup;
 			children = (
 				6650F27D25C4D2B600F47BB4 /* String+Stocks.swift */,
+				6650F2AB25C5543900F47BB4 /* URLSession+NetworkSession.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		6650F29625C54A9D00F47BB4 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				6650F29725C54AC100F47BB4 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		6650F29725C54AC100F47BB4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6650F2A125C54F1300F47BB4 /* Encodable.swift */,
+				6650F2BB25C564B300F47BB4 /* NetworkService.swift */,
+				6650F2A625C5530200F47BB4 /* NetworkSession.swift */,
+				6650F2B025C554EA00F47BB4 /* Endpointable.swift */,
+				6650F2B525C5560400F47BB4 /* NetworkConstant.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6650F2C325C5678D00F47BB4 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				6650F2CC25C5683000F47BB4 /* StocksNetworkServices */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		6650F2CC25C5683000F47BB4 /* StocksNetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				6650F2C425C567BF00F47BB4 /* StocksNetworkService.swift */,
+				6650F2D025C5684500F47BB4 /* MarketListEndpointEndpoint.swift */,
+				6650F31D25C5EA1300F47BB4 /* QuoteStockEndpoint.swift */,
+			);
+			path = StocksNetworkServices;
+			sourceTree = "<group>";
+		};
+		6650F2E725C5831700F47BB4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				6650F30B25C5C1C600F47BB4 /* PlainableModel */,
+				6650F2E825C5831F00F47BB4 /* ResponseModel */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		6650F2E825C5831F00F47BB4 /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				6650F32225C5EA4B00F47BB4 /* QuoteStock.swift */,
+			);
+			path = ResponseModel;
+			sourceTree = "<group>";
+		};
+		6650F30B25C5C1C600F47BB4 /* PlainableModel */ = {
+			isa = PBXGroup;
+			children = (
+				6650F30C25C5C26E00F47BB4 /* StockModel.swift */,
+			);
+			path = PlainableModel;
 			sourceTree = "<group>";
 		};
 		66EF4AB825C4B600005F6D06 = {
@@ -119,9 +205,10 @@
 		66EF4AC325C4B600005F6D06 /* TinkoffStocks */ = {
 			isa = PBXGroup;
 			children = (
-				66EF4B2025C4BF07005F6D06 /* Common */,
 				66EF4B1F25C4BEFF005F6D06 /* Application */,
+				66EF4B2025C4BF07005F6D06 /* Common */,
 				66EF4B0025C4BDCA005F6D06 /* Presentation */,
+				6650F29625C54A9D00F47BB4 /* Infrastructure */,
 				66EF4ACD25C4B604005F6D06 /* Assets.xcassets */,
 				66EF4ACF25C4B604005F6D06 /* LaunchScreen.storyboard */,
 				66EF4AD225C4B604005F6D06 /* Info.plist */,
@@ -193,6 +280,8 @@
 		66EF4B2025C4BF07005F6D06 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6650F2E725C5831700F47BB4 /* Entities */,
+				6650F2C325C5678D00F47BB4 /* NetworkServices */,
 				66EF4B3025C4C2CD005F6D06 /* Extensions */,
 				66EF4B2125C4BF0F005F6D06 /* Factories */,
 			);
@@ -364,14 +453,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				66EF4B1625C4BE0C005F6D06 /* StocksViewOutput.swift in Sources */,
+				6650F30D25C5C26E00F47BB4 /* StockModel.swift in Sources */,
 				66EF4B1125C4BDFF005F6D06 /* StocksPresenter.swift in Sources */,
+				6650F2AC25C5543900F47BB4 /* URLSession+NetworkSession.swift in Sources */,
 				66EF4B1B25C4BE1D005F6D06 /* StocksViewInput.swift in Sources */,
+				6650F2B625C5560400F47BB4 /* NetworkConstant.swift in Sources */,
+				6650F31E25C5EA1300F47BB4 /* QuoteStockEndpoint.swift in Sources */,
+				6650F2D125C5684500F47BB4 /* MarketListEndpointEndpoint.swift in Sources */,
+				6650F2BC25C564B300F47BB4 /* NetworkService.swift in Sources */,
 				66EF4B2C25C4C129005F6D06 /* DefaultPresentationsFactory.swift in Sources */,
 				6650F27E25C4D2B600F47BB4 /* String+Stocks.swift in Sources */,
 				66EF4B2425C4BF5F005F6D06 /* StocksPresentationFactory.swift in Sources */,
 				66EF4AC925C4B600005F6D06 /* StocksViewController.swift in Sources */,
+				6650F2A725C5530200F47BB4 /* NetworkSession.swift in Sources */,
+				6650F2A225C54F1300F47BB4 /* Encodable.swift in Sources */,
+				6650F32325C5EA4B00F47BB4 /* QuoteStock.swift in Sources */,
 				66EF4B3325C4C2ED005F6D06 /* UIColor+Stocks.swift in Sources */,
 				66EF4AC525C4B600005F6D06 /* AppDelegate.swift in Sources */,
+				6650F2B125C554EA00F47BB4 /* Endpointable.swift in Sources */,
+				6650F2C525C567BF00F47BB4 /* StocksNetworkService.swift in Sources */,
 				6650F28325C4DD5B00F47BB4 /* UILabel+Configure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +642,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CXDT86GZ7C;
+				Dzhamall_Token = pk_afec629eaf5548a08b2c49333fc38601;
 				INFOPLIST_FILE = TinkoffStocks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -562,6 +663,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CXDT86GZ7C;
+				Dzhamall_Token = pk_afec629eaf5548a08b2c49333fc38601;
 				INFOPLIST_FILE = TinkoffStocks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

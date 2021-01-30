@@ -18,5 +18,17 @@ extension UIColor {
                 return UIColor.white
             }
         }
+
+        static var baseUILabelElementColor: UIColor {
+            return .black
+        }
+
+        static var positivePriceChange: UIColor {
+            return UIColor.systemGreen
+        }
+
+        static var negativePriceChange: UIColor {
+            return UIColor.systemRed
+        }
     }
 }

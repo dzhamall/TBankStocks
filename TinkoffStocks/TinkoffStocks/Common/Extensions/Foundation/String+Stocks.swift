@@ -29,5 +29,13 @@ extension String {
         static var priceChangeConstantString: String {
             return "Price change"
         }
+
+        static var missingStringValue: String {
+            return "Отсутствует"
+        }
+
+        static var missingDoubleValue: String {
+            return "0.0"
+        }
     }
 }
