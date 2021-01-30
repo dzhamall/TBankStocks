@@ -34,6 +34,7 @@ final class StocksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        output.viewIsReady()
         setupViewsConstraints()
     }
 }
@@ -41,6 +42,26 @@ final class StocksViewController: UIViewController {
 // MARK: - Stocks View Input
 extension StocksViewController: StocksViewInput {
 
+    func displayStocksInfo() {
+        guard Thread.isMainThread else { return }
+        companiesPickerView.reloadAllComponents()
+    }
+
+    func updateStockInfo(withModel model: StockModel) {
+        guard Thread.isMainThread else { return }
+        companyNameLabel.text = model.companyName
+        symbolLabel.text = model.symbol
+        priceLabel.text = model.latestPrice
+        priceChangeLabel.text = model.changePrice
+        switch model.priceHesitation {
+        case .positive:
+            priceChangeLabel.textColor = UIColor.Stocks.positivePriceChange
+        case .negative:
+            priceChangeLabel.textColor = UIColor.Stocks.negativePriceChange
+        case .unchanged:
+            priceChangeLabel.textColor = UIColor.Stocks.baseUILabelElementColor
+        }
+    }
 }
 
 // MARK: - Picker View Data Source
@@ -53,11 +74,6 @@ extension StocksViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return output.obtainNumberOfRowsInPickerView()
     }
-
-    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return pickerView.bounds.height / 5
-    }
-
 }
 
 // MARK: - Picker View Delegate
@@ -65,6 +81,14 @@ extension StocksViewController: UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return output.obtainDataForDisplay(forRow: row)
+    }
+
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return pickerView.bounds.height / 5
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        output.pickerView(didSelectRow: row)
     }
 }
 

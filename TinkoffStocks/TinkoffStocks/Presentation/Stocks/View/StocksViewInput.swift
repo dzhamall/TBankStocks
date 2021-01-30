@@ -7,4 +7,8 @@
 
 import Foundation
 
-protocol StocksViewInput: AnyObject { }
+protocol StocksViewInput: AnyObject {
+
+    func displayStocksInfo()
+    func updateStockInfo(withModel model: StockModel)
+}

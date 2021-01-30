@@ -9,6 +9,8 @@ import Foundation
 
 protocol StocksViewOutput {
 
+    func viewIsReady()
     func obtainDataForDisplay(forRow row: Int) -> String?
     func obtainNumberOfRowsInPickerView() -> Int
+    func pickerView(didSelectRow row: Int)
 }

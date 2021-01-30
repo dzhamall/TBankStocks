@@ -15,7 +15,8 @@ protocol StocksPresentationFactory {
 extension StocksPresentationFactory {
 
     func makeStocksPresentation() -> UIViewController {
-        let presenter = StocksPresenter()
+        let networkService = StocksNetworkService(session: URLSession.shared)
+        let presenter = StocksPresenter(networkService: networkService)
         let viewController = StocksViewController(output: presenter)
 
         presenter.view = viewController
