@@ -2,7 +2,7 @@
 //  TinkoffStocksTests.swift
 //  TinkoffStocksTests
 //
-//  Created by unostraniero on 30.01.2021.
+//  Created by dzhamall on 30.01.2021.
 //
 
 import XCTest
