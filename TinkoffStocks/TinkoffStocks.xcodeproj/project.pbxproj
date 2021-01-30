@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6650F27E25C4D2B600F47BB4 /* String+Stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F27D25C4D2B600F47BB4 /* String+Stocks.swift */; };
+		6650F28325C4DD5B00F47BB4 /* UILabel+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F28225C4DD5B00F47BB4 /* UILabel+Configure.swift */; };
 		66EF4AC525C4B600005F6D06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4AC425C4B600005F6D06 /* AppDelegate.swift */; };
-		66EF4AC925C4B600005F6D06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4AC825C4B600005F6D06 /* ViewController.swift */; };
+		66EF4AC925C4B600005F6D06 /* StocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4AC825C4B600005F6D06 /* StocksViewController.swift */; };
 		66EF4ACE25C4B604005F6D06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EF4ACD25C4B604005F6D06 /* Assets.xcassets */; };
 		66EF4AD125C4B604005F6D06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EF4ACF25C4B604005F6D06 /* LaunchScreen.storyboard */; };
 		66EF4ADC25C4B605005F6D06 /* TinkoffStocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4ADB25C4B605005F6D06 /* TinkoffStocksTests.swift */; };
 		66EF4AE725C4B605005F6D06 /* TinkoffStocksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4AE625C4B605005F6D06 /* TinkoffStocksUITests.swift */; };
+		66EF4B1125C4BDFF005F6D06 /* StocksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4B1025C4BDFF005F6D06 /* StocksPresenter.swift */; };
+		66EF4B1625C4BE0C005F6D06 /* StocksViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4B1525C4BE0C005F6D06 /* StocksViewOutput.swift */; };
+		66EF4B1B25C4BE1D005F6D06 /* StocksViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4B1A25C4BE1D005F6D06 /* StocksViewInput.swift */; };
+		66EF4B2425C4BF5F005F6D06 /* StocksPresentationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4B2325C4BF5F005F6D06 /* StocksPresentationFactory.swift */; };
+		66EF4B2C25C4C129005F6D06 /* DefaultPresentationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4B2B25C4C129005F6D06 /* DefaultPresentationsFactory.swift */; };
+		66EF4B3325C4C2ED005F6D06 /* UIColor+Stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4B3225C4C2ED005F6D06 /* UIColor+Stocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6650F27D25C4D2B600F47BB4 /* String+Stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Stocks.swift"; sourceTree = "<group>"; };
+		6650F28225C4DD5B00F47BB4 /* UILabel+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Configure.swift"; sourceTree = "<group>"; };
 		66EF4AC125C4B600005F6D06 /* TinkoffStocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffStocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EF4AC425C4B600005F6D06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66EF4AC825C4B600005F6D06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66EF4AC825C4B600005F6D06 /* StocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewController.swift; sourceTree = "<group>"; };
 		66EF4ACD25C4B604005F6D06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66EF4AD025C4B604005F6D06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66EF4AD225C4B604005F6D06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +55,12 @@
 		66EF4AE225C4B605005F6D06 /* TinkoffStocksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkoffStocksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EF4AE625C4B605005F6D06 /* TinkoffStocksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffStocksUITests.swift; sourceTree = "<group>"; };
 		66EF4AE825C4B605005F6D06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66EF4B1025C4BDFF005F6D06 /* StocksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksPresenter.swift; sourceTree = "<group>"; };
+		66EF4B1525C4BE0C005F6D06 /* StocksViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewOutput.swift; sourceTree = "<group>"; };
+		66EF4B1A25C4BE1D005F6D06 /* StocksViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewInput.swift; sourceTree = "<group>"; };
+		66EF4B2325C4BF5F005F6D06 /* StocksPresentationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksPresentationFactory.swift; sourceTree = "<group>"; };
+		66EF4B2B25C4C129005F6D06 /* DefaultPresentationsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPresentationsFactory.swift; sourceTree = "<group>"; };
+		66EF4B3225C4C2ED005F6D06 /* UIColor+Stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Stocks.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6650F27C25C4D2A300F47BB4 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				6650F27D25C4D2B600F47BB4 /* String+Stocks.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		66EF4AB825C4B600005F6D06 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +119,9 @@
 		66EF4AC325C4B600005F6D06 /* TinkoffStocks */ = {
 			isa = PBXGroup;
 			children = (
-				66EF4AC425C4B600005F6D06 /* AppDelegate.swift */,
-				66EF4AC825C4B600005F6D06 /* ViewController.swift */,
+				66EF4B2025C4BF07005F6D06 /* Common */,
+				66EF4B1F25C4BEFF005F6D06 /* Application */,
+				66EF4B0025C4BDCA005F6D06 /* Presentation */,
 				66EF4ACD25C4B604005F6D06 /* Assets.xcassets */,
 				66EF4ACF25C4B604005F6D06 /* LaunchScreen.storyboard */,
 				66EF4AD225C4B604005F6D06 /* Info.plist */,
@@ -120,6 +145,93 @@
 				66EF4AE825C4B605005F6D06 /* Info.plist */,
 			);
 			path = TinkoffStocksUITests;
+			sourceTree = "<group>";
+		};
+		66EF4B0025C4BDCA005F6D06 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				66EF4B0425C4BDD2005F6D06 /* Stocks */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		66EF4B0425C4BDD2005F6D06 /* Stocks */ = {
+			isa = PBXGroup;
+			children = (
+				66EF4B0B25C4BDE3005F6D06 /* View */,
+				66EF4B0F25C4BDEB005F6D06 /* Presenter */,
+			);
+			path = Stocks;
+			sourceTree = "<group>";
+		};
+		66EF4B0B25C4BDE3005F6D06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66EF4AC825C4B600005F6D06 /* StocksViewController.swift */,
+				66EF4B1A25C4BE1D005F6D06 /* StocksViewInput.swift */,
+				66EF4B1525C4BE0C005F6D06 /* StocksViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66EF4B0F25C4BDEB005F6D06 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				66EF4B1025C4BDFF005F6D06 /* StocksPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		66EF4B1F25C4BEFF005F6D06 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				66EF4AC425C4B600005F6D06 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		66EF4B2025C4BF07005F6D06 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				66EF4B3025C4C2CD005F6D06 /* Extensions */,
+				66EF4B2125C4BF0F005F6D06 /* Factories */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		66EF4B2125C4BF0F005F6D06 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				66EF4B2225C4BF31005F6D06 /* Presentations */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		66EF4B2225C4BF31005F6D06 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				66EF4B2325C4BF5F005F6D06 /* StocksPresentationFactory.swift */,
+				66EF4B2B25C4C129005F6D06 /* DefaultPresentationsFactory.swift */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		66EF4B3025C4C2CD005F6D06 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6650F27C25C4D2A300F47BB4 /* Foundation */,
+				66EF4B3125C4C2D6005F6D06 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		66EF4B3125C4C2D6005F6D06 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				66EF4B3225C4C2ED005F6D06 /* UIColor+Stocks.swift */,
+				6650F28225C4DD5B00F47BB4 /* UILabel+Configure.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +363,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66EF4AC925C4B600005F6D06 /* ViewController.swift in Sources */,
+				66EF4B1625C4BE0C005F6D06 /* StocksViewOutput.swift in Sources */,
+				66EF4B1125C4BDFF005F6D06 /* StocksPresenter.swift in Sources */,
+				66EF4B1B25C4BE1D005F6D06 /* StocksViewInput.swift in Sources */,
+				66EF4B2C25C4C129005F6D06 /* DefaultPresentationsFactory.swift in Sources */,
+				6650F27E25C4D2B600F47BB4 /* String+Stocks.swift in Sources */,
+				66EF4B2425C4BF5F005F6D06 /* StocksPresentationFactory.swift in Sources */,
+				66EF4AC925C4B600005F6D06 /* StocksViewController.swift in Sources */,
+				66EF4B3325C4C2ED005F6D06 /* UIColor+Stocks.swift in Sources */,
 				66EF4AC525C4B600005F6D06 /* AppDelegate.swift in Sources */,
+				6650F28325C4DD5B00F47BB4 /* UILabel+Configure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -405,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
