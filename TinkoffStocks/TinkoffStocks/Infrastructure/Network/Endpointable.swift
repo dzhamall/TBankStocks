@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Endpointable {
+public protocol Endpointable {
     associatedtype DecodeModel: Decodable
 
     var baseURLString: String { get }
@@ -23,7 +23,7 @@ protocol Endpointable {
     func obtainDecodeModel() -> DecodeModel.Type
 }
 
-extension Endpointable {
+public extension Endpointable {
 
     var baseURLString: String {
         return "https://cloud.iexapis.com"

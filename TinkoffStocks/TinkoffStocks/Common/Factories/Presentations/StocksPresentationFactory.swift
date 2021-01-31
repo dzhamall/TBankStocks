@@ -16,7 +16,8 @@ extension StocksPresentationFactory {
 
     func makeStocksPresentation() -> UIViewController {
         let networkService = StocksNetworkService(session: URLSession.shared)
-        let presenter = StocksPresenter(networkService: networkService)
+        let anyImageLoader = AnyImageLoader()
+        let presenter = StocksPresenter(networkService: networkService, anyImageLoader: anyImageLoader)
         let viewController = StocksViewController(output: presenter)
 
         presenter.view = viewController

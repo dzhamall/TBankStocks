@@ -5,10 +5,17 @@
 //  Created by dzhamall on 30.01.2021.
 //
 
-import Foundation
+import UIKit
 
 protocol StocksViewInput: AnyObject {
 
     func displayStocksInfo()
-    func updateStockInfo(withModel model: StockModel)
+    func display(logo: UIImage, model: StockModel)
+    func dropInfos()
+    func startActivityIndicator()
+    func stopActivityIndicator()
+    func updateStockInfo(withModel model: StockModel, initialIndex: Int?)
+    func show(error: NetworkError)
+    func showReachabilityError()
+    
 }

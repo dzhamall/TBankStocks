@@ -10,8 +10,13 @@ import Foundation
 extension String {
 
     enum Stocks {
+
+        static var stockAppTitleString: String {
+            return "STOCKS"
+        }
+
         static var companyNameConstantString: String {
-            return "Company name"
+            return " Company name "
         }
 
         static var forEmptyLabel: String {
@@ -19,15 +24,15 @@ extension String {
         }
 
         static var symbolConstantString: String {
-            return "Symbol"
+            return " Symbol "
         }
 
         static var priceConstantString: String {
-            return "Price"
+            return " Price "
         }
 
         static var priceChangeConstantString: String {
-            return "Price change"
+            return " Price change "
         }
 
         static var missingStringValue: String {
@@ -36,6 +41,14 @@ extension String {
 
         static var missingDoubleValue: String {
             return "0.0"
+        }
+
+        static var minWeek52: String {
+            return "min"
+        }
+
+        static var maxWeek52: String {
+            return "max"
         }
     }
 }

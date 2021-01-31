@@ -8,7 +8,7 @@
 import Foundation
 
 /// Протокол для сетевых сервисов.  Любой сервис,  который вы хотите использовать для взаимодействия с сетью, должен конформить данный протокол.
-protocol NetworkService {
+public protocol NetworkService {
 
     /// Запрос в сеть
     /// - Parameters:
@@ -17,7 +17,7 @@ protocol NetworkService {
     func request<T:Endpointable>(endpoint: T, completion: @escaping (Result<T.DecodeModel?,NetworkError>) -> Void)
 }
 
-extension NetworkService {
+public extension NetworkService {
 
     func handleLoadData<T: Endpointable>(
         completion: @escaping (Result<T.DecodeModel?, NetworkError>) -> Void,
@@ -36,7 +36,7 @@ extension NetworkService {
             return
         } else {
             guard let data = data else {
-                completion(.failure(.unrecognizedError(NSError(domain: "unrecognized error", code: 0, userInfo: nil))))
+                completion(.failure(.responseDataEmpty(NSError(domain: "Пустой ответ от сервера", code: 0, userInfo: nil))))
                 return
             }
             do {

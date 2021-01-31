@@ -10,10 +10,13 @@ import UIKit
 extension UILabel {
     func configure(withText text: String, textAligment: NSTextAlignment?) -> UIView {
         translatesAutoresizingMaskIntoConstraints = false
+        
         self.text = text
-
         guard let textAligment = textAligment else { return self }
         textAlignment = textAligment
+        backgroundColor = UIColor.Stocks.backgroundLabelConstantView
+        layer.cornerRadius = 10
+        layer.masksToBounds = true
         return self
     }
 }

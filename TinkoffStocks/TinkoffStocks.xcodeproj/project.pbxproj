@@ -20,6 +20,23 @@
 		6650F30D25C5C26E00F47BB4 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F30C25C5C26E00F47BB4 /* StockModel.swift */; };
 		6650F31E25C5EA1300F47BB4 /* QuoteStockEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F31D25C5EA1300F47BB4 /* QuoteStockEndpoint.swift */; };
 		6650F32325C5EA4B00F47BB4 /* QuoteStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F32225C5EA4B00F47BB4 /* QuoteStock.swift */; };
+		6650F33825C6029400F47BB4 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F33725C6029400F47BB4 /* BarGraph.swift */; };
+		6650F33D25C602B400F47BB4 /* BarGraphEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F33C25C602B400F47BB4 /* BarGraphEngine.swift */; };
+		6650F34225C602D300F47BB4 /* BarGraphEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F34125C602D300F47BB4 /* BarGraphEntity.swift */; };
+		6650F34725C602EB00F47BB4 /* BarGraphStockEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F34625C602EB00F47BB4 /* BarGraphStockEntity.swift */; };
+		6650F34C25C6040000F47BB4 /* Array+safeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F34B25C6040000F47BB4 /* Array+safeValue.swift */; };
+		6650F35125C607E700F47BB4 /* CALayer+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F35025C607E700F47BB4 /* CALayer+Animations.swift */; };
+		6650F35625C6177F00F47BB4 /* Double+TimeConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F35525C6177F00F47BB4 /* Double+TimeConfigurable.swift */; };
+		6650F36925C6A03200F47BB4 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F36825C6A03200F47BB4 /* AvatarView.swift */; };
+		6650F36F25C6AA4100F47BB4 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F36E25C6AA4100F47BB4 /* ImageLoader.swift */; };
+		6650F37C25C6AA9100F47BB4 /* AnyImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F37B25C6AA9100F47BB4 /* AnyImageLoader.swift */; };
+		6650F38125C6AEEE00F47BB4 /* StockLogoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F38025C6AEEE00F47BB4 /* StockLogoEndpoint.swift */; };
+		6650F38625C6AF3900F47BB4 /* StockLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F38525C6AF3900F47BB4 /* StockLogo.swift */; };
+		6650F39B25C6D97400F47BB4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F39A25C6D97400F47BB4 /* Reachability.swift */; };
+		6650F41525C6FF5B00F47BB4 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F41425C6FF5B00F47BB4 /* AlertService.swift */; };
+		6650F42D25C718FC00F47BB4 /* NetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F42C25C718FC00F47BB4 /* NetworkServiceTest.swift */; };
+		6650F43325C719C400F47BB4 /* EndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F43225C719C400F47BB4 /* EndpointMock.swift */; };
+		6650F43B25C71A9800F47BB4 /* NetworkSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650F43A25C71A9800F47BB4 /* NetworkSessionMock.swift */; };
 		66EF4AC525C4B600005F6D06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4AC425C4B600005F6D06 /* AppDelegate.swift */; };
 		66EF4AC925C4B600005F6D06 /* StocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF4AC825C4B600005F6D06 /* StocksViewController.swift */; };
 		66EF4ACE25C4B604005F6D06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EF4ACD25C4B604005F6D06 /* Assets.xcassets */; };
@@ -65,6 +82,23 @@
 		6650F30C25C5C26E00F47BB4 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		6650F31D25C5EA1300F47BB4 /* QuoteStockEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteStockEndpoint.swift; sourceTree = "<group>"; };
 		6650F32225C5EA4B00F47BB4 /* QuoteStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteStock.swift; sourceTree = "<group>"; };
+		6650F33725C6029400F47BB4 /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
+		6650F33C25C602B400F47BB4 /* BarGraphEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphEngine.swift; sourceTree = "<group>"; };
+		6650F34125C602D300F47BB4 /* BarGraphEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphEntity.swift; sourceTree = "<group>"; };
+		6650F34625C602EB00F47BB4 /* BarGraphStockEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphStockEntity.swift; sourceTree = "<group>"; };
+		6650F34B25C6040000F47BB4 /* Array+safeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+safeValue.swift"; sourceTree = "<group>"; };
+		6650F35025C607E700F47BB4 /* CALayer+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Animations.swift"; sourceTree = "<group>"; };
+		6650F35525C6177F00F47BB4 /* Double+TimeConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+TimeConfigurable.swift"; sourceTree = "<group>"; };
+		6650F36825C6A03200F47BB4 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		6650F36E25C6AA4100F47BB4 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		6650F37B25C6AA9100F47BB4 /* AnyImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyImageLoader.swift; sourceTree = "<group>"; };
+		6650F38025C6AEEE00F47BB4 /* StockLogoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockLogoEndpoint.swift; sourceTree = "<group>"; };
+		6650F38525C6AF3900F47BB4 /* StockLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockLogo.swift; sourceTree = "<group>"; };
+		6650F39A25C6D97400F47BB4 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		6650F41425C6FF5B00F47BB4 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		6650F42C25C718FC00F47BB4 /* NetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTest.swift; sourceTree = "<group>"; };
+		6650F43225C719C400F47BB4 /* EndpointMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointMock.swift; sourceTree = "<group>"; };
+		6650F43A25C71A9800F47BB4 /* NetworkSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionMock.swift; sourceTree = "<group>"; };
 		66EF4AC125C4B600005F6D06 /* TinkoffStocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffStocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EF4AC425C4B600005F6D06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66EF4AC825C4B600005F6D06 /* StocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +149,8 @@
 			children = (
 				6650F27D25C4D2B600F47BB4 /* String+Stocks.swift */,
 				6650F2AB25C5543900F47BB4 /* URLSession+NetworkSession.swift */,
+				6650F34B25C6040000F47BB4 /* Array+safeValue.swift */,
+				6650F35525C6177F00F47BB4 /* Double+TimeConfigurable.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -153,6 +189,7 @@
 				6650F2C425C567BF00F47BB4 /* StocksNetworkService.swift */,
 				6650F2D025C5684500F47BB4 /* MarketListEndpointEndpoint.swift */,
 				6650F31D25C5EA1300F47BB4 /* QuoteStockEndpoint.swift */,
+				6650F38025C6AEEE00F47BB4 /* StockLogoEndpoint.swift */,
 			);
 			path = StocksNetworkServices;
 			sourceTree = "<group>";
@@ -170,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				6650F32225C5EA4B00F47BB4 /* QuoteStock.swift */,
+				6650F38525C6AF3900F47BB4 /* StockLogo.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -180,6 +218,68 @@
 				6650F30C25C5C26E00F47BB4 /* StockModel.swift */,
 			);
 			path = PlainableModel;
+			sourceTree = "<group>";
+		};
+		6650F33625C6028300F47BB4 /* BarGraph */ = {
+			isa = PBXGroup;
+			children = (
+				6650F33725C6029400F47BB4 /* BarGraph.swift */,
+				6650F33C25C602B400F47BB4 /* BarGraphEngine.swift */,
+				6650F34125C602D300F47BB4 /* BarGraphEntity.swift */,
+				6650F34625C602EB00F47BB4 /* BarGraphStockEntity.swift */,
+			);
+			path = BarGraph;
+			sourceTree = "<group>";
+		};
+		6650F36725C6A01E00F47BB4 /* AvatatarView */ = {
+			isa = PBXGroup;
+			children = (
+				6650F36825C6A03200F47BB4 /* AvatarView.swift */,
+			);
+			path = AvatatarView;
+			sourceTree = "<group>";
+		};
+		6650F36D25C6AA2E00F47BB4 /* AsyncImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				6650F36E25C6AA4100F47BB4 /* ImageLoader.swift */,
+				6650F37B25C6AA9100F47BB4 /* AnyImageLoader.swift */,
+			);
+			path = AsyncImageLoader;
+			sourceTree = "<group>";
+		};
+		6650F39925C6D96400F47BB4 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				6650F39A25C6D97400F47BB4 /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		6650F41325C6FF4F00F47BB4 /* AlertService */ = {
+			isa = PBXGroup;
+			children = (
+				6650F41425C6FF5B00F47BB4 /* AlertService.swift */,
+			);
+			path = AlertService;
+			sourceTree = "<group>";
+		};
+		6650F42525C7171600F47BB4 /* InfrastructureTests */ = {
+			isa = PBXGroup;
+			children = (
+				6650F43125C719BC00F47BB4 /* Mocks */,
+				6650F42C25C718FC00F47BB4 /* NetworkServiceTest.swift */,
+			);
+			path = InfrastructureTests;
+			sourceTree = "<group>";
+		};
+		6650F43125C719BC00F47BB4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				6650F43225C719C400F47BB4 /* EndpointMock.swift */,
+				6650F43A25C71A9800F47BB4 /* NetworkSessionMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		66EF4AB825C4B600005F6D06 = {
@@ -219,6 +319,7 @@
 		66EF4ADA25C4B605005F6D06 /* TinkoffStocksTests */ = {
 			isa = PBXGroup;
 			children = (
+				6650F42525C7171600F47BB4 /* InfrastructureTests */,
 				66EF4ADB25C4B605005F6D06 /* TinkoffStocksTests.swift */,
 				66EF4ADD25C4B605005F6D06 /* Info.plist */,
 			);
@@ -280,6 +381,11 @@
 		66EF4B2025C4BF07005F6D06 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6650F41325C6FF4F00F47BB4 /* AlertService */,
+				6650F39925C6D96400F47BB4 /* Reachability */,
+				6650F36D25C6AA2E00F47BB4 /* AsyncImageLoader */,
+				6650F36725C6A01E00F47BB4 /* AvatatarView */,
+				6650F33625C6028300F47BB4 /* BarGraph */,
 				6650F2E725C5831700F47BB4 /* Entities */,
 				6650F2C325C5678D00F47BB4 /* NetworkServices */,
 				66EF4B3025C4C2CD005F6D06 /* Extensions */,
@@ -319,6 +425,7 @@
 			children = (
 				66EF4B3225C4C2ED005F6D06 /* UIColor+Stocks.swift */,
 				6650F28225C4DD5B00F47BB4 /* UILabel+Configure.swift */,
+				6650F35025C607E700F47BB4 /* CALayer+Animations.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -454,25 +561,39 @@
 			files = (
 				66EF4B1625C4BE0C005F6D06 /* StocksViewOutput.swift in Sources */,
 				6650F30D25C5C26E00F47BB4 /* StockModel.swift in Sources */,
+				6650F36F25C6AA4100F47BB4 /* ImageLoader.swift in Sources */,
 				66EF4B1125C4BDFF005F6D06 /* StocksPresenter.swift in Sources */,
 				6650F2AC25C5543900F47BB4 /* URLSession+NetworkSession.swift in Sources */,
+				6650F38125C6AEEE00F47BB4 /* StockLogoEndpoint.swift in Sources */,
+				6650F39B25C6D97400F47BB4 /* Reachability.swift in Sources */,
+				6650F33D25C602B400F47BB4 /* BarGraphEngine.swift in Sources */,
 				66EF4B1B25C4BE1D005F6D06 /* StocksViewInput.swift in Sources */,
+				6650F34725C602EB00F47BB4 /* BarGraphStockEntity.swift in Sources */,
 				6650F2B625C5560400F47BB4 /* NetworkConstant.swift in Sources */,
+				6650F35125C607E700F47BB4 /* CALayer+Animations.swift in Sources */,
 				6650F31E25C5EA1300F47BB4 /* QuoteStockEndpoint.swift in Sources */,
 				6650F2D125C5684500F47BB4 /* MarketListEndpointEndpoint.swift in Sources */,
 				6650F2BC25C564B300F47BB4 /* NetworkService.swift in Sources */,
 				66EF4B2C25C4C129005F6D06 /* DefaultPresentationsFactory.swift in Sources */,
+				6650F34225C602D300F47BB4 /* BarGraphEntity.swift in Sources */,
 				6650F27E25C4D2B600F47BB4 /* String+Stocks.swift in Sources */,
+				6650F41525C6FF5B00F47BB4 /* AlertService.swift in Sources */,
+				6650F37C25C6AA9100F47BB4 /* AnyImageLoader.swift in Sources */,
+				6650F38625C6AF3900F47BB4 /* StockLogo.swift in Sources */,
 				66EF4B2425C4BF5F005F6D06 /* StocksPresentationFactory.swift in Sources */,
+				6650F33825C6029400F47BB4 /* BarGraph.swift in Sources */,
 				66EF4AC925C4B600005F6D06 /* StocksViewController.swift in Sources */,
 				6650F2A725C5530200F47BB4 /* NetworkSession.swift in Sources */,
 				6650F2A225C54F1300F47BB4 /* Encodable.swift in Sources */,
 				6650F32325C5EA4B00F47BB4 /* QuoteStock.swift in Sources */,
 				66EF4B3325C4C2ED005F6D06 /* UIColor+Stocks.swift in Sources */,
 				66EF4AC525C4B600005F6D06 /* AppDelegate.swift in Sources */,
+				6650F34C25C6040000F47BB4 /* Array+safeValue.swift in Sources */,
 				6650F2B125C554EA00F47BB4 /* Endpointable.swift in Sources */,
 				6650F2C525C567BF00F47BB4 /* StocksNetworkService.swift in Sources */,
+				6650F35625C6177F00F47BB4 /* Double+TimeConfigurable.swift in Sources */,
 				6650F28325C4DD5B00F47BB4 /* UILabel+Configure.swift in Sources */,
+				6650F36925C6A03200F47BB4 /* AvatarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +601,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6650F43B25C71A9800F47BB4 /* NetworkSessionMock.swift in Sources */,
+				6650F42D25C718FC00F47BB4 /* NetworkServiceTest.swift in Sources */,
+				6650F43325C719C400F47BB4 /* EndpointMock.swift in Sources */,
 				66EF4ADC25C4B605005F6D06 /* TinkoffStocksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +764,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CXDT86GZ7C;
 				Dzhamall_Token = pk_afec629eaf5548a08b2c49333fc38601;
@@ -651,6 +776,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dzhamall.TinkoffStocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -661,6 +787,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CXDT86GZ7C;
 				Dzhamall_Token = pk_afec629eaf5548a08b2c49333fc38601;
@@ -672,6 +799,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dzhamall.TinkoffStocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
