@@ -9,6 +9,7 @@ import UIKit
 
 final class StocksViewController: UIViewController {
 
+    // MARK: - Property
     private lazy var companiesPickerView = UIPickerView()
     private lazy var companyConstantNameLabel = UILabel()
     private lazy var companyNameLabel = UILabel()
@@ -18,8 +19,41 @@ final class StocksViewController: UIViewController {
     private lazy var priceLabel = UILabel()
     private lazy var priceChangeConstantLabel = UILabel()
     private lazy var priceChangeLabel = UILabel()
+    private lazy var activityIndicator = UIActivityIndicatorView(style: .gray)
+    private lazy var barGraphView = BarGraph()
+
+    private lazy var avatarLogoView: AvatarView = {
+        let avatarView = AvatarView(frame: CGRect(x: 0.0, y: 0.0, width: 38.0, height: 38.0))
+        avatarView.set(state: .initial, hesitation: nil)
+        return avatarView
+    }()
+    private lazy var avatarBarItem: UIBarButtonItem = {
+        let item = UIBarButtonItem(customView: avatarLogoView)
+        item.width = 38.0
+        return item
+    }()
+    private lazy var stockLogoBarItem: UIBarButtonItem = {
+        let item = UIBarButtonItem(
+            title: String.Stocks.stockAppTitleString,
+            style: .plain,
+            target: nil,
+            action: nil
+        )
+        item.tintColor = UIColor.Stocks.baseUILabelElementColor
+        return item
+    }()
+    private lazy var blurView: UIVisualEffectView = {
+        let view = UIVisualEffectView()
+        view.effect = UIBlurEffect(style: .dark)
+        view.alpha = 0
+        view.isUserInteractionEnabled = false
+        view.frame = self.view.bounds
+        return view
+    }()
 
     private let output: StocksViewOutput
+
+    // MARK: - Lyfecycle
 
     init(output: StocksViewOutput) {
         self.output = output
@@ -36,6 +70,17 @@ final class StocksViewController: UIViewController {
 
         output.viewIsReady()
         setupViewsConstraints()
+        setupNavigationBar()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+
+    // MARK: - Private Methods
+
+    private func toggleBlur(_ blurred: Bool) {
+        self.blurView.alpha = blurred ? 0.99 : 0
     }
 }
 
@@ -47,7 +92,28 @@ extension StocksViewController: StocksViewInput {
         companiesPickerView.reloadAllComponents()
     }
 
-    func updateStockInfo(withModel model: StockModel) {
+    func startActivityIndicator() {
+        activityIndicator.startAnimating()
+    }
+
+    func stopActivityIndicator() {
+        activityIndicator.stopAnimating()
+    }
+
+    func display(logo: UIImage, model: StockModel) {
+        avatarLogoView.set(image: logo, hesitation: model.priceHesitation)
+    }
+
+    func dropInfos() {
+        avatarLogoView.set(state: .initial, hesitation: .unchanged)
+        companyNameLabel.text = String.Stocks.forEmptyLabel
+        symbolLabel.text = String.Stocks.forEmptyLabel
+        priceLabel.text = String.Stocks.forEmptyLabel
+        priceChangeLabel.text = String.Stocks.forEmptyLabel
+        priceChangeLabel.textColor = UIColor.Stocks.baseUILabelElementColor
+    }
+
+    func updateStockInfo(withModel model: StockModel, initialIndex: Int? = nil) {
         guard Thread.isMainThread else { return }
         companyNameLabel.text = model.companyName
         symbolLabel.text = model.symbol
@@ -61,6 +127,42 @@ extension StocksViewController: StocksViewInput {
         case .unchanged:
             priceChangeLabel.textColor = UIColor.Stocks.baseUILabelElementColor
         }
+        barGraphView.updateDataEntities(
+            entity: model.configureBarGraphStockEntity(),
+            animated: true,
+            maximumValue: model.maximumPrice
+        )
+        guard let initialIndex = initialIndex else { return }
+        companiesPickerView.selectRow(initialIndex, inComponent: initialIndex, animated: true)
+
+    }
+
+    func show(error: NetworkError) {
+        toggleBlur(true)
+        let alertAction = UIAlertAction(title: "Попробовать еще раз", style: .cancel) { action in
+            self.output.viewIsReady()
+            self.toggleBlur(false)
+        }
+        AlertService.showAlert(
+            style: .actionSheet,
+            title: "Извините, что то пошло не так",
+            message: error.localizedDescription,
+            actions: [alertAction],
+            completion: nil)
+    }
+
+    func showReachabilityError() {
+        toggleBlur(true)
+        avatarLogoView.set(state: .initial, hesitation: .unchanged)
+        let alertAction = UIAlertAction(title: " Обновить ", style: .cancel) { action in
+            self.output.viewIsReady()
+            self.toggleBlur(false)
+        }
+        AlertService.showAlert(
+            style: .actionSheet,
+            title: "УУУпс... похоже нет доступа к интернету. Попробуйте проверить интернет соединение или разрешение на сотовые данные в настройках",
+            actions: [alertAction]
+        )
     }
 }
 
@@ -101,9 +203,12 @@ private extension StocksViewController {
         let symboLabelsConstraints = symbolConstantLabelConstraints() + symbolLabelConstraints()
         let priceLabelsConstraints = priceConstantLabelConstraints() + priceLabelConstraints() + priceChangeLabelConstraints() +
             priceChangeConstantLabelConstraints()
+        let barGraphViewsConstraints = barGraphViewConstraints() + activityIdicatorConstraints()
         NSLayoutConstraint.activate(
-            pickerViewConstraints + nameLabelsConstraints + symboLabelsConstraints + priceLabelsConstraints
+            pickerViewConstraints + nameLabelsConstraints + symboLabelsConstraints + priceLabelsConstraints +
+                barGraphViewsConstraints
         )
+        view.addSubview(blurView)
         companyConstantNameLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         companyNameLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         symbolConstantLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
@@ -140,6 +245,8 @@ private extension StocksViewController {
     }
 
     func companyNameLabelConstraints() -> [NSLayoutConstraint] {
+        companyNameLabel.minimumScaleFactor = 0.75
+        companyNameLabel.adjustsFontSizeToFitWidth = true
         view.addSubview(companyNameLabel.configure(withText: String.Stocks.forEmptyLabel, textAligment: nil))
         let constraints = [
             companyNameLabel.topAnchor.constraint(equalTo: companyConstantNameLabel.topAnchor),
@@ -212,5 +319,37 @@ private extension StocksViewController {
                 constant: 22)
         ]
         return constraints
+    }
+
+    func barGraphViewConstraints() -> [NSLayoutConstraint] {
+        barGraphView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(barGraphView)
+        let constraints = [
+            barGraphView.topAnchor.constraint(equalTo: priceChangeConstantLabel.bottomAnchor, constant: 16),
+            barGraphView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            barGraphView.trailingAnchor.constraint(equalTo:  view.trailingAnchor),
+            barGraphView.bottomAnchor.constraint(equalTo: companiesPickerView.topAnchor, constant: -8)
+        ]
+        return constraints
+    }
+
+    func activityIdicatorConstraints() -> [NSLayoutConstraint] {
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        barGraphView.addSubview(activityIndicator)
+        let constraints = [
+            activityIndicator.centerYAnchor.constraint(equalTo: barGraphView.centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: barGraphView.centerXAnchor)
+        ]
+        return constraints
+    }
+
+    func setupNavigationBar() {
+        UIView.performWithoutAnimation {
+            self.navigationItem.leftBarButtonItem = stockLogoBarItem
+            let space1 = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+            space1.width = 8.0
+            self.navigationItem.rightBarButtonItems = [avatarBarItem, space1]
+        }
     }
 }

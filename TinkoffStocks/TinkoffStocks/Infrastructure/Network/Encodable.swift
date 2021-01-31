@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ParametersEncodable {
+public protocol ParametersEncodable {
 
     /// Кодирует [String:String] в параметры url запроса
     /// - Parameters:
@@ -17,7 +17,7 @@ protocol ParametersEncodable {
     static func encode(parameters: Parameters, urlRequest: inout URLRequest) throws
 }
 
-extension ParametersEncodable {
+public extension ParametersEncodable {
 
     static func encode(parameters: Parameters, urlRequest: inout URLRequest) throws {
         var queryItems = [URLQueryItem]()

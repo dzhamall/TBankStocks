@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class StocksNetworkService: NetworkService {
+final public class StocksNetworkService: NetworkService {
 
     private let session: NetworkSession
 
@@ -15,7 +15,7 @@ final class StocksNetworkService: NetworkService {
         self.session = session
     }
 
-    func request<T: Endpointable>(endpoint: T, completion: @escaping (Result<T.DecodeModel?, NetworkError>) -> Void) {
+    public func request<T: Endpointable>(endpoint: T, completion: @escaping (Result<T.DecodeModel?, NetworkError>) -> Void) {
         do {
             let request = try endpoint.configureURLRequest()
             session.loadData(from: request) { [weak self] (data, response, error) in

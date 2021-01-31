@@ -7,19 +7,19 @@
 
 import Foundation
 
-typealias Parameters = [String:String]
-typealias HTTPHeaders = [String:String]
+public typealias Parameters = [String:String]
+public typealias HTTPHeaders = [String:String]
 
-struct QueryEncoding: ParametersEncodable { }
+public struct QueryEncoding: ParametersEncodable { }
 
-enum HTTPMethodType: String {
+public enum HTTPMethodType: String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
     case delete  = "DELETE"
 }
 
-enum NetworkError: Error {
+public enum NetworkError: Error {
     case noResponseFromServer
     case parsingJSONFailure
     case rediraction(Error?)
@@ -27,5 +27,6 @@ enum NetworkError: Error {
     case serverError(Error?)
     case unrecognizedError(Error?)
     case configureUrlRequestFailure(Error?)
+    case responseDataEmpty(Error?)
     case missing
 }

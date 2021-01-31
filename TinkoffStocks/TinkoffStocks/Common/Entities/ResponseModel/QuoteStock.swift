@@ -17,25 +17,25 @@ struct QuoteStock: Codable {
     /// Refers to the percent change in price between latestPrice and previousClose. 
     let changePercent: Double?
     /// Refers to the market-wide highest price from the SIP. 15 minute delayed during normal market hours 9:30 - 16:00 (null before 9:45 and weekends).
-    let high: Double?
+    let high: Float?
     /// Refers to time high was updated as epoch timestamp
     let highTime: Double?
     /// Refers to the market-wide lowest price from the SIP. 15 minute delayed during normal market hours 9:30 - 16:00 (null before 9:45 and weekends).
-    let low: Double?
+    let low: Float?
     /// Refers to time low was updated as epoch timestamp
     let lowTime: Double?
     /// Use this to get the latest price
     let latestPrice: Double?
     /// Refers to the open price from IEX
-    let iexOpen: Double?
+    let iexOpen: Float?
     /// Refers to the listing exchange time for the open from IEX
-    let iexOpenTime: Int?
+    let iexOpenTime: Double?
     /// Refers to the close price from IEX
-    let iexClose: Double?
+    let iexClose: Float?
     /// Refers to the listing exchange time for the close from IEX
-    let iexCloseTime: Int?
+    let iexCloseTime: Double?
     /// Refers to the adjusted 52 week low
-    let week52low: Double?
+    let week52Low: Float?
     /// Refers to the adjusted 52 week high
-    let week52High: Double?
+    let week52High: Float?
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 /// Обертка для URLSession.  Упрощает тестирование запросов
-protocol NetworkSession {
+public protocol NetworkSession {
 
     /// Загрузить данные
     /// - Parameters:
@@ -17,7 +17,7 @@ protocol NetworkSession {
     func loadData(from request: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void)
 }
 
-extension NetworkSession where Self: URLSession {
+public extension NetworkSession where Self: URLSession {
 
     func loadData(from request: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
         var task: URLSessionDataTask?
