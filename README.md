@@ -1,5 +1,5 @@
 # TinkoffStock
-Test task at Tinkoff fintech
+Test task at Tinkoff fintech school
 
 1. Список популярных акций в pickerView.
 2. Отдельные запросы по каждой ации
